@@ -6,7 +6,7 @@ target 'SWASensoriOS' do
   use_frameworks!
 
   # Pods for SWASensoriOS
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 5.8.1'
   pod 'SnapKit'
   pod 'Swinject'
   pod 'SideMenu', '~> 5.0'
@@ -14,7 +14,11 @@ target 'SWASensoriOS' do
   pod 'SwiftCharts', '~> 0.6.5'
   pod 'RxSwift', '6.6.0'
   pod 'RxCocoa', '6.6.0'
-   
+  pod 'NetworkCore', :path => './NetworkCore'
+  pod 'ReportingModule', :path => './ReportingModule'
+  pod 'AMSModule', :path => './AMSModule'
+  pod 'SMSModule', :path => './SMSModule'
+
   target 'SWASensoriOSTests' do
     inherit! :search_paths
     # Pods for testing
@@ -24,4 +28,12 @@ target 'SWASensoriOS' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "13.0"
+    end
+  end
 end
