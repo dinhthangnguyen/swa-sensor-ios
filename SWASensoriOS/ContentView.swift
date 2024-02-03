@@ -6,16 +6,29 @@
 //
 
 import SwiftUI
+import ReportingModule
+import AMSModule
+import SMSModule
 
 struct ContentView: View {
+    @State private var tabSelection = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $tabSelection) {
+         
+            AMSView()
+                .tabItem {
+                    Label("API Manager Service", systemImage: "checklist")
+                }
+            SMSView()
+                .tabItem {
+                    Label("Service Manager Service", systemImage: "point.3.filled.connected.trianglepath.dotted")
+                }
+            ReportingServiceView()
+                .tabItem {
+                    Label("Reporting Service", systemImage: "chart.xyaxis.line")
+                }
         }
-        .padding()
     }
 }
 
