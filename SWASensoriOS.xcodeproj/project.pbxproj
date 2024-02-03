@@ -179,6 +179,7 @@
 				82569DA72B6DE5350041D9E6 /* Sources */,
 				82569DA82B6DE5350041D9E6 /* Frameworks */,
 				82569DA92B6DE5350041D9E6 /* Resources */,
+				41D4511C9C9067D0941F2767 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +217,7 @@
 				82569DC12B6DE5360041D9E6 /* Sources */,
 				82569DC22B6DE5360041D9E6 /* Frameworks */,
 				82569DC32B6DE5360041D9E6 /* Resources */,
+				0B3F01D921880398DE8DC386 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +299,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B3F01D921880398DE8DC386 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWASensoriOS-SWASensoriOSUITests/Pods-SWASensoriOS-SWASensoriOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWASensoriOS-SWASensoriOSUITests/Pods-SWASensoriOS-SWASensoriOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SWASensoriOS-SWASensoriOSUITests/Pods-SWASensoriOS-SWASensoriOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41D4511C9C9067D0941F2767 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWASensoriOS/Pods-SWASensoriOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWASensoriOS/Pods-SWASensoriOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SWASensoriOS/Pods-SWASensoriOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		96AD5754A32A218B736C3936 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
