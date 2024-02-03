@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		82569DAF2B6DE5350041D9E6 /* SWASensoriOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DAE2B6DE5350041D9E6 /* SWASensoriOSApp.swift */; };
+		82569DB12B6DE5350041D9E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DB02B6DE5350041D9E6 /* ContentView.swift */; };
+		82569DB32B6DE5360041D9E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82569DB22B6DE5360041D9E6 /* Assets.xcassets */; };
+		82569DB62B6DE5360041D9E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82569DB52B6DE5360041D9E6 /* Preview Assets.xcassets */; };
+		82569DC02B6DE5360041D9E6 /* SWASensoriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DBF2B6DE5360041D9E6 /* SWASensoriOSTests.swift */; };
+		82569DCA2B6DE5360041D9E6 /* SWASensoriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DC92B6DE5360041D9E6 /* SWASensoriOSUITests.swift */; };
+		82569DCC2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DCB2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift */; };
+		892CD7ABAB5F351EA0067C73 /* Pods_SWASensoriOS_SWASensoriOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77908CC35ADED913A5F21BA9 /* Pods_SWASensoriOS_SWASensoriOSUITests.framework */; };
+		89BC8407543C5F93E5461406 /* Pods_SWASensoriOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C53359044F540223277D5B7 /* Pods_SWASensoriOSTests.framework */; };
+		F61C18B5C80AC90A73619481 /* Pods_SWASensoriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3771A1006217E23F801BF11 /* Pods_SWASensoriOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		82569DBC2B6DE5360041D9E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82569DA32B6DE5350041D9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82569DAA2B6DE5350041D9E6;
+			remoteInfo = SWASensoriOS;
+		};
+		82569DC62B6DE5360041D9E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82569DA32B6DE5350041D9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82569DAA2B6DE5350041D9E6;
+			remoteInfo = SWASensoriOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D31E5E0873046BBB9C37DAE /* Pods-SWASensoriOS-SWASensoriOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWASensoriOS-SWASensoriOSUITests.release.xcconfig"; path = "Target Support Files/Pods-SWASensoriOS-SWASensoriOSUITests/Pods-SWASensoriOS-SWASensoriOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		12242346EFD8B81784BD3772 /* Pods-SWASensoriOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWASensoriOSTests.release.xcconfig"; path = "Target Support Files/Pods-SWASensoriOSTests/Pods-SWASensoriOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		1C53359044F540223277D5B7 /* Pods_SWASensoriOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWASensoriOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20698C0F20C46CDE28FE72C1 /* Pods-SWASensoriOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWASensoriOS.release.xcconfig"; path = "Target Support Files/Pods-SWASensoriOS/Pods-SWASensoriOS.release.xcconfig"; sourceTree = "<group>"; };
+		30E905F4AF9ED05020BD9917 /* Pods-SWASensoriOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWASensoriOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SWASensoriOSTests/Pods-SWASensoriOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		77908CC35ADED913A5F21BA9 /* Pods_SWASensoriOS_SWASensoriOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWASensoriOS_SWASensoriOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE68D5B1A5DF673785F9760 /* Pods-SWASensoriOS-SWASensoriOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWASensoriOS-SWASensoriOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-SWASensoriOS-SWASensoriOSUITests/Pods-SWASensoriOS-SWASensoriOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		82569DAB2B6DE5350041D9E6 /* SWASensoriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWASensoriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82569DAE2B6DE5350041D9E6 /* SWASensoriOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWASensoriOSApp.swift; sourceTree = "<group>"; };
+		82569DB02B6DE5350041D9E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		82569DB22B6DE5360041D9E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82569DB52B6DE5360041D9E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		82569DBB2B6DE5360041D9E6 /* SWASensoriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWASensoriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82569DBF2B6DE5360041D9E6 /* SWASensoriOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWASensoriOSTests.swift; sourceTree = "<group>"; };
+		82569DC52B6DE5360041D9E6 /* SWASensoriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWASensoriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82569DC92B6DE5360041D9E6 /* SWASensoriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWASensoriOSUITests.swift; sourceTree = "<group>"; };
+		82569DCB2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWASensoriOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		964E252523967B86B33A7D13 /* Pods-SWASensoriOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWASensoriOS.debug.xcconfig"; path = "Target Support Files/Pods-SWASensoriOS/Pods-SWASensoriOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D3771A1006217E23F801BF11 /* Pods_SWASensoriOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWASensoriOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82569DA82B6DE5350041D9E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61C18B5C80AC90A73619481 /* Pods_SWASensoriOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82569DB82B6DE5360041D9E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89BC8407543C5F93E5461406 /* Pods_SWASensoriOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82569DC22B6DE5360041D9E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892CD7ABAB5F351EA0067C73 /* Pods_SWASensoriOS_SWASensoriOSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56D9F36AB6F6597BCDED0955 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				964E252523967B86B33A7D13 /* Pods-SWASensoriOS.debug.xcconfig */,
+				20698C0F20C46CDE28FE72C1 /* Pods-SWASensoriOS.release.xcconfig */,
+				7CE68D5B1A5DF673785F9760 /* Pods-SWASensoriOS-SWASensoriOSUITests.debug.xcconfig */,
+				0D31E5E0873046BBB9C37DAE /* Pods-SWASensoriOS-SWASensoriOSUITests.release.xcconfig */,
+				30E905F4AF9ED05020BD9917 /* Pods-SWASensoriOSTests.debug.xcconfig */,
+				12242346EFD8B81784BD3772 /* Pods-SWASensoriOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		82569DA22B6DE5350041D9E6 = {
+			isa = PBXGroup;
+			children = (
+				82569DAD2B6DE5350041D9E6 /* SWASensoriOS */,
+				82569DBE2B6DE5360041D9E6 /* SWASensoriOSTests */,
+				82569DC82B6DE5360041D9E6 /* SWASensoriOSUITests */,
+				82569DAC2B6DE5350041D9E6 /* Products */,
+				56D9F36AB6F6597BCDED0955 /* Pods */,
+				B3C05238342007AA49F60F71 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		82569DAC2B6DE5350041D9E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82569DAB2B6DE5350041D9E6 /* SWASensoriOS.app */,
+				82569DBB2B6DE5360041D9E6 /* SWASensoriOSTests.xctest */,
+				82569DC52B6DE5360041D9E6 /* SWASensoriOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82569DAD2B6DE5350041D9E6 /* SWASensoriOS */ = {
+			isa = PBXGroup;
+			children = (
+				82569DAE2B6DE5350041D9E6 /* SWASensoriOSApp.swift */,
+				82569DB02B6DE5350041D9E6 /* ContentView.swift */,
+				82569DB22B6DE5360041D9E6 /* Assets.xcassets */,
+				82569DB42B6DE5360041D9E6 /* Preview Content */,
+			);
+			path = SWASensoriOS;
+			sourceTree = "<group>";
+		};
+		82569DB42B6DE5360041D9E6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				82569DB52B6DE5360041D9E6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		82569DBE2B6DE5360041D9E6 /* SWASensoriOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				82569DBF2B6DE5360041D9E6 /* SWASensoriOSTests.swift */,
+			);
+			path = SWASensoriOSTests;
+			sourceTree = "<group>";
+		};
+		82569DC82B6DE5360041D9E6 /* SWASensoriOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				82569DC92B6DE5360041D9E6 /* SWASensoriOSUITests.swift */,
+				82569DCB2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift */,
+			);
+			path = SWASensoriOSUITests;
+			sourceTree = "<group>";
+		};
+		B3C05238342007AA49F60F71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3771A1006217E23F801BF11 /* Pods_SWASensoriOS.framework */,
+				77908CC35ADED913A5F21BA9 /* Pods_SWASensoriOS_SWASensoriOSUITests.framework */,
+				1C53359044F540223277D5B7 /* Pods_SWASensoriOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82569DAA2B6DE5350041D9E6 /* SWASensoriOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82569DCF2B6DE5360041D9E6 /* Build configuration list for PBXNativeTarget "SWASensoriOS" */;
+			buildPhases = (
+				96AD5754A32A218B736C3936 /* [CP] Check Pods Manifest.lock */,
+				82569DA72B6DE5350041D9E6 /* Sources */,
+				82569DA82B6DE5350041D9E6 /* Frameworks */,
+				82569DA92B6DE5350041D9E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SWASensoriOS;
+			productName = SWASensoriOS;
+			productReference = 82569DAB2B6DE5350041D9E6 /* SWASensoriOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		82569DBA2B6DE5360041D9E6 /* SWASensoriOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82569DD22B6DE5360041D9E6 /* Build configuration list for PBXNativeTarget "SWASensoriOSTests" */;
+			buildPhases = (
+				CEB85ED3B3D35B8ECDED8CAB /* [CP] Check Pods Manifest.lock */,
+				82569DB72B6DE5360041D9E6 /* Sources */,
+				82569DB82B6DE5360041D9E6 /* Frameworks */,
+				82569DB92B6DE5360041D9E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82569DBD2B6DE5360041D9E6 /* PBXTargetDependency */,
+			);
+			name = SWASensoriOSTests;
+			productName = SWASensoriOSTests;
+			productReference = 82569DBB2B6DE5360041D9E6 /* SWASensoriOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		82569DC42B6DE5360041D9E6 /* SWASensoriOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82569DD52B6DE5360041D9E6 /* Build configuration list for PBXNativeTarget "SWASensoriOSUITests" */;
+			buildPhases = (
+				E1BE6299D31BA4C377621C8D /* [CP] Check Pods Manifest.lock */,
+				82569DC12B6DE5360041D9E6 /* Sources */,
+				82569DC22B6DE5360041D9E6 /* Frameworks */,
+				82569DC32B6DE5360041D9E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82569DC72B6DE5360041D9E6 /* PBXTargetDependency */,
+			);
+			name = SWASensoriOSUITests;
+			productName = SWASensoriOSUITests;
+			productReference = 82569DC52B6DE5360041D9E6 /* SWASensoriOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82569DA32B6DE5350041D9E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					82569DAA2B6DE5350041D9E6 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					82569DBA2B6DE5360041D9E6 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 82569DAA2B6DE5350041D9E6;
+					};
+					82569DC42B6DE5360041D9E6 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 82569DAA2B6DE5350041D9E6;
+					};
+				};
+			};
+			buildConfigurationList = 82569DA62B6DE5350041D9E6 /* Build configuration list for PBXProject "SWASensoriOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 82569DA22B6DE5350041D9E6;
+			productRefGroup = 82569DAC2B6DE5350041D9E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82569DAA2B6DE5350041D9E6 /* SWASensoriOS */,
+				82569DBA2B6DE5360041D9E6 /* SWASensoriOSTests */,
+				82569DC42B6DE5360041D9E6 /* SWASensoriOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82569DA92B6DE5350041D9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82569DB62B6DE5360041D9E6 /* Preview Assets.xcassets in Resources */,
+				82569DB32B6DE5360041D9E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82569DB92B6DE5360041D9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82569DC32B6DE5360041D9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96AD5754A32A218B736C3936 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWASensoriOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEB85ED3B3D35B8ECDED8CAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWASensoriOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1BE6299D31BA4C377621C8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWASensoriOS-SWASensoriOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82569DA72B6DE5350041D9E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82569DB12B6DE5350041D9E6 /* ContentView.swift in Sources */,
+				82569DAF2B6DE5350041D9E6 /* SWASensoriOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82569DB72B6DE5360041D9E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82569DC02B6DE5360041D9E6 /* SWASensoriOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82569DC12B6DE5360041D9E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82569DCC2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift in Sources */,
+				82569DCA2B6DE5360041D9E6 /* SWASensoriOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82569DBD2B6DE5360041D9E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82569DAA2B6DE5350041D9E6 /* SWASensoriOS */;
+			targetProxy = 82569DBC2B6DE5360041D9E6 /* PBXContainerItemProxy */;
+		};
+		82569DC72B6DE5360041D9E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82569DAA2B6DE5350041D9E6 /* SWASensoriOS */;
+			targetProxy = 82569DC62B6DE5360041D9E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		82569DCD2B6DE5360041D9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		82569DCE2B6DE5360041D9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82569DD02B6DE5360041D9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 964E252523967B86B33A7D13 /* Pods-SWASensoriOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SWASensoriOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CRBFJ3EC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.priusteam.swssensorios.SWASensoriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		82569DD12B6DE5360041D9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20698C0F20C46CDE28FE72C1 /* Pods-SWASensoriOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SWASensoriOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CRBFJ3EC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.priusteam.swssensorios.SWASensoriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		82569DD32B6DE5360041D9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E905F4AF9ED05020BD9917 /* Pods-SWASensoriOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9CRBFJ3EC3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.priusteam.swssensorios.SWASensoriOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWASensoriOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SWASensoriOS";
+			};
+			name = Debug;
+		};
+		82569DD42B6DE5360041D9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12242346EFD8B81784BD3772 /* Pods-SWASensoriOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9CRBFJ3EC3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.priusteam.swssensorios.SWASensoriOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWASensoriOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SWASensoriOS";
+			};
+			name = Release;
+		};
+		82569DD62B6DE5360041D9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE68D5B1A5DF673785F9760 /* Pods-SWASensoriOS-SWASensoriOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9CRBFJ3EC3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.priusteam.swssensorios.SWASensoriOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SWASensoriOS;
+			};
+			name = Debug;
+		};
+		82569DD72B6DE5360041D9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D31E5E0873046BBB9C37DAE /* Pods-SWASensoriOS-SWASensoriOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9CRBFJ3EC3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.priusteam.swssensorios.SWASensoriOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SWASensoriOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82569DA62B6DE5350041D9E6 /* Build configuration list for PBXProject "SWASensoriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82569DCD2B6DE5360041D9E6 /* Debug */,
+				82569DCE2B6DE5360041D9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82569DCF2B6DE5360041D9E6 /* Build configuration list for PBXNativeTarget "SWASensoriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82569DD02B6DE5360041D9E6 /* Debug */,
+				82569DD12B6DE5360041D9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82569DD22B6DE5360041D9E6 /* Build configuration list for PBXNativeTarget "SWASensoriOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82569DD32B6DE5360041D9E6 /* Debug */,
+				82569DD42B6DE5360041D9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82569DD52B6DE5360041D9E6 /* Build configuration list for PBXNativeTarget "SWASensoriOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82569DD62B6DE5360041D9E6 /* Debug */,
+				82569DD72B6DE5360041D9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82569DA32B6DE5350041D9E6 /* Project object */;
+}
