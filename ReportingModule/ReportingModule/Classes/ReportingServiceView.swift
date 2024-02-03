@@ -12,8 +12,13 @@ public struct ReportingServiceView: View {
         
     }
     public var body: some View {
-        Text("Reporting Service")
+        NavigationView {
+            Text("Reporting Service")
+                .navigationTitle("Reporting Service")
+//                .navigationBarTitleDisplayMode(.inline)
+        }
     }
+    
 }
 
 #Preview {

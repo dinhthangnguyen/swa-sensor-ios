@@ -8,6 +8,7 @@
 import SwiftUI
 import ReportingModule
 import AMSModule
+import SMSModule
 
 struct ContentView: View {
     @State private var tabSelection = 0
@@ -17,11 +18,15 @@ struct ContentView: View {
          
             AMSView()
                 .tabItem {
-                    Label("AMS", systemImage: "list.bullet")
+                    Label("API Manager Service", systemImage: "checklist")
+                }
+            SMSView()
+                .tabItem {
+                    Label("Service Manager Service", systemImage: "point.3.filled.connected.trianglepath.dotted")
                 }
             ReportingServiceView()
                 .tabItem {
-                    Label("RS", systemImage: "list.bullet")
+                    Label("Reporting Service", systemImage: "chart.xyaxis.line")
                 }
         }
     }
