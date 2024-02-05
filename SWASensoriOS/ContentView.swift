@@ -24,7 +24,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Service Manager Service", systemImage: "point.3.filled.connected.trianglepath.dotted")
                 }
-            ReportingServiceView()
+            ReportingView()
                 .tabItem {
                     Label("Reporting Service", systemImage: "chart.xyaxis.line")
                 }

@@ -30,8 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'AMSModule/Classes/**/*'
-  
+#  s.source_files = 'AMSModule/Classes/**/*'
+  s.source_files  = "AMSModule/Classes", "AMSModule/**/*.{h,m,swift}"
+
   # s.resource_bundles = {
   #   'AMSModule' => ['AMSModule/Assets/*.png']
   # }
