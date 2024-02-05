@@ -20,7 +20,7 @@ extension ReportingView {
         init(reportingService: ReportingServiceProtocol = ReportingService()) {
             self.reportingService = reportingService
             getTopics()
-            getReports("SS_2_1")
+            getReports("SS_2_1", from: 1707147400325, to: 1707147505321)
         }
         
         func getTopics() {

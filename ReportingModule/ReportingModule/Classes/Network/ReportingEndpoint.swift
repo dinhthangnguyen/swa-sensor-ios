@@ -55,4 +55,13 @@ extension ReportingEndpoint: NetworkEndpointProtocol {
         }
     }
     
+    
+    public var fullURL: String {
+        switch self {
+        case .getReportsByTopic:
+            return baseURL.absoluteString + path
+        default:
+            return baseURL.appendingPathComponent(path).absoluteString
+        }
+    }
 }

@@ -36,6 +36,7 @@ public final class NetworkService: NetworkServiceProtocol {
     
     
     public func request<T: Codable>(endpoint: NetworkEndpointProtocol) -> AnyPublisher<T, NetworkError> {
+        print("endpoint: " + endpoint.fullURL)
         return session.request(
             endpoint.fullURL,
             method: endpoint.method,
