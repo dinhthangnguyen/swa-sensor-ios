@@ -25,10 +25,10 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 #  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Thang Nguyen' => 'nguyendinhthanght@gmail.com' }
-  s.source           = { :git => 'https://github.com/Thang Nguyen/AMSModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dinhthangnguyen/swa-sensor-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '16.0'
 
 #  s.source_files = 'AMSModule/Classes/**/*'
   s.source_files  = "AMSModule/Classes", "AMSModule/**/*.{h,m,swift}"
@@ -39,5 +39,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+  s.dependency 'Alamofire', '~> 5.8.1'
   s.dependency 'NetworkCore'
 end

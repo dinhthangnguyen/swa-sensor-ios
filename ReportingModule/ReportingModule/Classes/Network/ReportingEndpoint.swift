@@ -42,7 +42,7 @@ extension ReportingEndpoint: NetworkEndpointProtocol {
             guard let from = from, let to = to else {
                 return report
             }
-            return report + "?from=\(from)&to=\(to)"
+            return report + "&from=\(from)&to=\(to)"
 
         }
     }

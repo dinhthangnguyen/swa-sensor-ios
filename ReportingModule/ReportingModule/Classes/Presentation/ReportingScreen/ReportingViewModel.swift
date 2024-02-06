@@ -139,7 +139,7 @@ extension ReportingView {
             let topics = self.topics.filter {$0.contains(dataSource)}
             reportingService.getReportsByTopics(topics: topics, from: from, to: to).sink { completion in
             } receiveValue: {[weak self] reports in
-                print("reports: " ,reports)
+//                print("reports: " ,reports)
                 self?.reportGroups = reports
                 self?.reports = []
             }.store(in: &cancelableSet)
@@ -149,7 +149,7 @@ extension ReportingView {
         private func getReportByTopics(_ topics: [String], from: Int? = nil, to: Int? = nil) {
              reportingService.getReportsByTopics(topics: topics, from: from, to: to).sink { completion in
              } receiveValue: {[weak self] reports in
-                 print("reports: " ,reports)
+//                 print("reports: " ,reports)
                  self?.reportGroups = reports
                  self?.reports = []
              }.store(in: &cancelableSet)
