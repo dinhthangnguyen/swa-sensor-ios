@@ -25,7 +25,7 @@ extension AMSEndpoint: NetworkEndpointProtocol {
     }
     
     var baseURL: URL {
-        guard let url = URL(string: "http://localhost:8787") else {
+        guard let url = URL(string: "http://localhost:8787/api") else {
             fatalError("Please provide correct URL")
         }
         return url
@@ -37,7 +37,7 @@ extension AMSEndpoint: NetworkEndpointProtocol {
             return "/apis"
         case let .updateAPI(amsDTO):
             return "/apis/\(amsDTO.id)"
-        case let .createAPI(amsDTO):
+        case .createAPI:
             return "/apis"
         }
     }
@@ -46,9 +46,9 @@ extension AMSEndpoint: NetworkEndpointProtocol {
         switch self {
         case .getAllAPIs:
             return .get
-        case let .updateAPI(amsDTO):
+        case .updateAPI:
             return .put
-        case let .createAPI(amsDTO):
+        case .createAPI:
             return .post
         }
     }

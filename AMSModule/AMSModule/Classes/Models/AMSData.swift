@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AMSData: Codable, Identifiable {
+struct AMSData: Hashable, Codable, Identifiable {
     let id : String
     let name : String
     let endpoint : String
