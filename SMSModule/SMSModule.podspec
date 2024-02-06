@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '13.0'
 
   #s.source_files = 'SMSModule/Classes/**/*'
-  s.source_files  = "SMSModule/Classes", "ReportingModule/**/*.{h,m,swift}"
+  s.source_files  = "Classes", "SMSModule/**/*.{h,m,swift}"
 
   # s.resource_bundles = {
   #   'SMSModule' => ['SMSModule/Assets/*.png']
