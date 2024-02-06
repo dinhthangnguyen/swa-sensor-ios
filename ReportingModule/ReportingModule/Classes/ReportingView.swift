@@ -31,7 +31,7 @@ public struct ReportingView: View {
             get: {viewModel.toDate}, set: {viewModel.toDate = $0}
         )
         
-        NavigationView {
+        NavigationStack {
             VStack {
                 HStack(content: {
                     VStack {
