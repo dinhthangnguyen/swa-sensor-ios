@@ -10,8 +10,6 @@ target 'SWASensoriOS' do
   pod 'SnapKit'
   pod 'Swinject'
   pod 'SideMenu', '~> 5.0'
-  pod 'DGCharts'
-  pod 'SwiftCharts', '~> 0.6.5'
   pod 'RxSwift', '6.6.0'
   pod 'RxCocoa', '6.6.0'
   pod 'NetworkCore', :path => './NetworkCore'
@@ -33,7 +31,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "14.0"
+      config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "16.0"
     end
   end
 end
