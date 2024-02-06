@@ -11,6 +11,7 @@ import Alamofire
 public enum ReportingEndpoint {
     case getTopicNames
     case getReportsByTopic(topicName: String, from: Int?, to: Int?)
+    case getReportsByTopics(topics: [String], from: Int?, to: Int?)
 }
 
 extension ReportingEndpoint: NetworkEndpointProtocol {
@@ -30,6 +31,18 @@ extension ReportingEndpoint: NetworkEndpointProtocol {
                 return "/report/topic/\(topicName)"
             }
             return "/report/topic/\(topicName)/time?from=\(from)&to=\(to)"
+            
+        case let .getReportsByTopics(topics, from, to):
+            var report = "/report/topicNames?topicNames="
+            topics.forEach {topic in
+                report += topic + ","
+            }
+            report.removeLast()
+            
+            guard let from = from, let to = to else {
+                return report
+            }
+            return report + "?from=\(from)&to=\(to)"
 
         }
     }
@@ -58,7 +71,7 @@ extension ReportingEndpoint: NetworkEndpointProtocol {
     
     public var fullURL: String {
         switch self {
-        case .getReportsByTopic:
+        case .getReportsByTopic, .getReportsByTopics:
             return baseURL.absoluteString + path
         default:
             return baseURL.appendingPathComponent(path).absoluteString

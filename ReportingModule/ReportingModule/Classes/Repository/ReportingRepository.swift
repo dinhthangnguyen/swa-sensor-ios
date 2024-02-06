@@ -12,6 +12,7 @@ import NetworkCore
 protocol ReportingRepositoryProtocol {
     func getTopicNames() -> AnyPublisher<[String], NetworkError>
     func getReportsByTopic(name: String, from: Int?, to: Int?) -> AnyPublisher<ReportResponseDTO, NetworkError>
+    func getReportsByTopics(topics: [String], from: Int?, to: Int?) -> AnyPublisher<[ReportResponseDTO], NetworkError>
 }
 
 final class ReportingRepository: ReportingRepositoryProtocol {
@@ -27,5 +28,9 @@ final class ReportingRepository: ReportingRepositoryProtocol {
     
     func getReportsByTopic(name: String, from: Int?, to: Int?) -> AnyPublisher<ReportResponseDTO, NetworkError> {
         networkService.request(endpoint: ReportingEndpoint.getReportsByTopic(topicName: name, from: from, to: to))
+    }
+    
+    func getReportsByTopics(topics: [String], from: Int?, to: Int?) -> AnyPublisher<[ReportResponseDTO], NetworkError> {
+        networkService.request(endpoint: ReportingEndpoint.getReportsByTopics(topics: topics, from: from, to: to))
     }
 }

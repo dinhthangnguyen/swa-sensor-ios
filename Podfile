@@ -10,8 +10,6 @@ target 'SWASensoriOS' do
   pod 'SnapKit'
   pod 'Swinject'
   pod 'SideMenu', '~> 5.0'
-  pod 'DGCharts'
-  pod 'SwiftCharts', '~> 0.6.5'
   pod 'RxSwift', '6.6.0'
   pod 'RxCocoa', '6.6.0'
   pod 'NetworkCore', :path => './NetworkCore'

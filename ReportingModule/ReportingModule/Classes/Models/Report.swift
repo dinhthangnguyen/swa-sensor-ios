@@ -10,7 +10,7 @@ import SwiftUI
 public struct Report: Identifiable {
     public let id: String
     public let value: Double
-    public let timestamp: Int
+    public let timestamp: Date
     public let dataSource: String
     
     

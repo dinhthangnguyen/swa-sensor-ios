@@ -11,7 +11,7 @@ final class ReportAdapter {
     static func getReport(reportDTO: ReportDTO, dataSource: String) -> Report {
         return Report(id: reportDTO.id ?? "",
                       value: reportDTO.value ?? 0,
-                      timestamp: reportDTO.timestamp ?? 0,
+                      timestamp: Date(timeIntervalSince1970: Double(reportDTO.timestamp ?? 0) / 1000.0),
                       dataSource: dataSource)
     }
     
@@ -23,5 +23,15 @@ final class ReportAdapter {
         }
         
         return reports
+    }
+    
+    static func getReportGroup(reportResponse: ReportResponseDTO) -> ReportGroup {
+        let dataSource = reportResponse.topicName ?? ""
+        
+        let reports = (reportResponse.data ?? []).map { data in
+            return getReport(reportDTO: data, dataSource: dataSource)
+        }
+        
+        return ReportGroup(id: dataSource, data: reports)
     }
 }
