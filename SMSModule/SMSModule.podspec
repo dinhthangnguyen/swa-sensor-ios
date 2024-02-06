@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Victor Nguyen/SMSModule'
+  s.homepage         = 'https://github.com/dinhthangnguyen/swa-sensor-ios.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   #s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Victor Nguyen' => 'victorng.ios@gmail.com' }
-  s.source           = { :git => 'https://github.com/Victor Nguyen/SMSModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dinhthangnguyen/swa-sensor-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
