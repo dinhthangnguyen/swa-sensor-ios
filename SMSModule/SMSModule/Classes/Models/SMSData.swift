@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SMSData : Codable, Identifiable {
+struct SMSData : Hashable, Codable, Identifiable {
     let id : String
     let image : String
     let containerName : String
