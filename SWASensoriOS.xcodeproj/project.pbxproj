@@ -14,7 +14,6 @@
 		82569DC02B6DE5360041D9E6 /* SWASensoriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DBF2B6DE5360041D9E6 /* SWASensoriOSTests.swift */; };
 		82569DCA2B6DE5360041D9E6 /* SWASensoriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DC92B6DE5360041D9E6 /* SWASensoriOSUITests.swift */; };
 		82569DCC2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569DCB2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift */; };
-		82614C5A2B709D2500608562 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82614C592B709D2500608562 /* DI.swift */; };
 		892CD7ABAB5F351EA0067C73 /* Pods_SWASensoriOS_SWASensoriOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77908CC35ADED913A5F21BA9 /* Pods_SWASensoriOS_SWASensoriOSUITests.framework */; };
 		89BC8407543C5F93E5461406 /* Pods_SWASensoriOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C53359044F540223277D5B7 /* Pods_SWASensoriOSTests.framework */; };
 		F61C18B5C80AC90A73619481 /* Pods_SWASensoriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3771A1006217E23F801BF11 /* Pods_SWASensoriOS.framework */; };
@@ -55,7 +54,6 @@
 		82569DC52B6DE5360041D9E6 /* SWASensoriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWASensoriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82569DC92B6DE5360041D9E6 /* SWASensoriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWASensoriOSUITests.swift; sourceTree = "<group>"; };
 		82569DCB2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWASensoriOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		82614C592B709D2500608562 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		964E252523967B86B33A7D13 /* Pods-SWASensoriOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWASensoriOS.debug.xcconfig"; path = "Target Support Files/Pods-SWASensoriOS/Pods-SWASensoriOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D3771A1006217E23F801BF11 /* Pods_SWASensoriOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWASensoriOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,7 +124,6 @@
 		82569DAD2B6DE5350041D9E6 /* SWASensoriOS */ = {
 			isa = PBXGroup;
 			children = (
-				82614C582B709D1600608562 /* DI */,
 				82569DAE2B6DE5350041D9E6 /* SWASensoriOSApp.swift */,
 				82569DB02B6DE5350041D9E6 /* ContentView.swift */,
 				82569DB22B6DE5360041D9E6 /* Assets.xcassets */,
@@ -158,14 +155,6 @@
 				82569DCB2B6DE5360041D9E6 /* SWASensoriOSUITestsLaunchTests.swift */,
 			);
 			path = SWASensoriOSUITests;
-			sourceTree = "<group>";
-		};
-		82614C582B709D1600608562 /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				82614C592B709D2500608562 /* DI.swift */,
-			);
-			path = DI;
 			sourceTree = "<group>";
 		};
 		B3C05238342007AA49F60F71 /* Frameworks */ = {
@@ -418,7 +407,6 @@
 			files = (
 				82569DB12B6DE5350041D9E6 /* ContentView.swift in Sources */,
 				82569DAF2B6DE5350041D9E6 /* SWASensoriOSApp.swift in Sources */,
-				82614C5A2B709D2500608562 /* DI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

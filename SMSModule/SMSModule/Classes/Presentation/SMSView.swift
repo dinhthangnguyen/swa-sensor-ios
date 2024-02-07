@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NetworkCore
 
 public struct SMSView: View {
     @ObservedObject var viewModel = ViewModel()
@@ -29,6 +30,7 @@ public struct SMSView: View {
             .navigationBarTitleDisplayMode(.inline)
             .frame(minWidth: 300)
         }
+        
         .onAppear {
             viewModel.getRunningContainers()
         }

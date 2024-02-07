@@ -7,11 +7,6 @@ target 'SWASensoriOS' do
 
   # Pods for SWASensoriOS
   pod 'Alamofire', '~> 5.8.1'
-  pod 'SnapKit'
-  pod 'Swinject'
-  pod 'SideMenu', '~> 5.0'
-  pod 'RxSwift', '6.6.0'
-  pod 'RxCocoa', '6.6.0'
   pod 'NetworkCore', :path => './NetworkCore'
   pod 'ReportingModule', :path => './ReportingModule'
   pod 'AMSModule', :path => './AMSModule'

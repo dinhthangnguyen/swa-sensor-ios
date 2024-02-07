@@ -12,10 +12,6 @@ struct SWASensoriOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
-                    DIContainer.shared.start()
-
-                }
         }
     }
 }

@@ -91,7 +91,7 @@ extension ReportingView {
         
         private func getTopics() {
             let sharePublisher = reportingService.getTopicNames().share()
-            sharePublisher.sink { [weak self] completion in
+            sharePublisher.sink { completion in
             } receiveValue: { [weak self]names in
                 print("topics: " , names)
                 self?.topics = names

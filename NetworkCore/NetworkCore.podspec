@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 #  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Thang Nguyen' => 'nguyendinhthanght@gmail.com' }
-  s.source           = { :git => 'https://github.com/Thang Nguyen/NetworkCore.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dinhthangnguyen/swa-sensor-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
@@ -40,6 +40,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Alamofire', '~> 5.8.1'
-  s.dependency 'Swinject'
 
 end
