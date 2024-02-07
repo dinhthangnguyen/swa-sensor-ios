@@ -9,6 +9,8 @@ import SwiftUI
 
 public struct AMSView: View {
     @ObservedObject var viewModel = ViewModel()
+    @State private var showing = false
+
     public init() {
         
     }
@@ -20,22 +22,30 @@ public struct AMSView: View {
                     AMSRow(ams: ams)
                 }
             }
-            .navigationTitle("SMS")
+            .navigationTitle("API Manager Service")
             .navigationBarTitleDisplayMode(.inline)
             .frame(minWidth: 300)
-            
-        }
-        .toolbar {
-            ToolbarItem {
-                NavigationLink {
-                    SMSView()
-                } label: {
-                    Label("Add", systemImage: "add")
+            .toolbar {
+                ToolbarItem {
+//                    NavigationLink {
+//                        AMSDetailView(viewModel: AMSDetailView.ViewModel())
+//                    } label: {
+//                        Label("Add", systemImage: "plus")
+//                    }
+                    Button(action: {
+                        showing.toggle()
+                    }, label: {
+                        Label("Add", systemImage: "plus")
+                    })
                 }
-
-                
             }
+            .sheet(isPresented: $showing, onDismiss: {
+                viewModel.getAllAPIs()
+            }, content: {
+                AMSDetailView(viewModel: AMSDetailView.ViewModel())
+            })
         }
+    
         
     
     }

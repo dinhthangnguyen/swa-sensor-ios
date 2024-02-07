@@ -17,7 +17,14 @@ enum AMSEndpoint {
 
 extension AMSEndpoint: NetworkEndpointProtocol {
     var parameters: [String : Any]? {
-        nil
+        switch self {
+        case let  .createAPI(ams):
+            return ams.toParameters()
+        case let .updateAPI(ams):
+            return ams.toParameters()
+        default:
+            return nil
+        }
     }
     
     var header: [String : String]? {

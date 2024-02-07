@@ -25,7 +25,7 @@ extension AMSView {
         }
         
         
-        private func getAllAPIs() {
+        func getAllAPIs() {
             self.loading = true
             amsService.getAllAPIs().sink {[weak self] completion in
                 self?.loading = false

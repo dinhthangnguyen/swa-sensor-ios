@@ -30,7 +30,7 @@ class AMSRepository: AMSRepositoryProtocol {
     }
     
     func createAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkCore.NetworkError> {
-        networkService.request(endpoint: AMSEndpoint.updateAPI(ams: ams))
+        networkService.request(endpoint: AMSEndpoint.createAPI(ams: ams))
     }
     
     

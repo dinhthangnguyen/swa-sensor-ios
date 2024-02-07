@@ -15,7 +15,7 @@ struct AMSRow: View {
             HStack  {
                 Text(ams.endpoint).bold().font(.system(size: 13))
                 Spacer()
-                Text(ams.status).font(.system(size: 12))
+                Text(ams.status.rawValue).font(.system(size: 12))
             }
             Spacer(minLength: 20)
             HStack {
@@ -30,5 +30,5 @@ struct AMSRow: View {
 }
 
 #Preview {
-    AMSRow(ams: AMSData(id: "1", name: "hello", endpoint: "dadf", description: "adf", status: "NEW"))
+    AMSRow(ams: AMSData(id: "1", name: "hello", endpoint: "dadf", description: "adf", status: .new))
 }
