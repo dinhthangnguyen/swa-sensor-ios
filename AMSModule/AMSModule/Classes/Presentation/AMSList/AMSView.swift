@@ -17,14 +17,17 @@ public struct AMSView: View {
     public var body: some View {
         let binding: Binding<AMSData?> = Binding(get: {viewModel.selectedService}, set: {viewModel.selectedService = $0})
         NavigationStack {
-            List(selection: binding) {
-                ForEach(viewModel.amsArray) { ams in
-                    NavigationLink {
-                        AMSDetailView(viewModel: AMSDetailView.ViewModel(selectedAMSItem: ams))
-                    } label: {
-                        AMSRow(ams: ams)
+            ZStack {
+                List(selection: binding) {
+                    ForEach(viewModel.amsArray) { ams in
+                        NavigationLink {
+                            AMSDetailView(viewModel: AMSDetailView.ViewModel(selectedAMSItem: ams))
+                        } label: {
+                            AMSRow(ams: ams)
+                        }
                     }
                 }
+                loadingView(viewModel.loading)
             }
             .navigationTitle("API Manager Service")
             .navigationBarTitleDisplayMode(.inline)

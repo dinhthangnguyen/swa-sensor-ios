@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Charts
-
+import NetworkCore
 
 public struct ReportingView: View {
     @ObservedObject var viewModel = ViewModel()
@@ -32,35 +32,39 @@ public struct ReportingView: View {
         )
         
         NavigationStack {
-            VStack {
-                HStack(content: {
-                    VStack {
-                        DatePicker(selection: fromDate) {
-                            Text("From Date")
+            ZStack {
+                VStack {
+                    HStack(content: {
+                        VStack {
+                            DatePicker(selection: fromDate) {
+                                Text("From Date")
+                            }
+                            DatePicker(selection: toDate) {
+                                Text("To Date")
+                            }
                         }
-                        DatePicker(selection: toDate) {
-                            Text("To Date")
-                        }
-                    }
-                    
-                }).padding()
-                Chart {
-                    ForEach(viewModel.reports, id: \.id) { report in
-                        LineMark(x: .value("Time", report.timestamp),
-                                 y: .value("Value", report.value))
-                        .foregroundStyle(by: .value("Data Source", report.dataSource))
-                    }
-                    
-                    ForEach(viewModel.reportGroups, id: \.id) { reportGroup in
-                        ForEach(reportGroup.data, id: \.id) { report in
+                        
+                    }).padding()
+                    Chart {
+                        ForEach(viewModel.reports, id: \.id) { report in
                             LineMark(x: .value("Time", report.timestamp),
-                                     y: .value("Value", report.value),
-                                     series: .value("Topic", report.dataSource)
-                            )
-                            .foregroundStyle(reportGroup.color)
+                                     y: .value("Value", report.value))
+                            .foregroundStyle(by: .value("Data Source", report.dataSource))
+                        }
+                        
+                        ForEach(viewModel.reportGroups, id: \.id) { reportGroup in
+                            ForEach(reportGroup.data, id: \.id) { report in
+                                LineMark(x: .value("Time", report.timestamp),
+                                         y: .value("Value", report.value),
+                                         series: .value("Topic", report.dataSource)
+                                )
+                                .foregroundStyle(reportGroup.color)
+                            }
                         }
                     }
                 }
+                
+                loadingView(viewModel.loading)
             }
             
             .navigationTitle("Reporting Service")

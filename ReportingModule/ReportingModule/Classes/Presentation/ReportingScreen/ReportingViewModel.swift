@@ -25,6 +25,7 @@ extension ReportingView {
         @Published var fromDate: Date = Date.init(timeIntervalSinceNow: -10*24*3600)
         @Published var toDate: Date = .now
         @Published var selectedTopic: String? = nil
+        @Published var loading = false
         
         private var cancelableSet: Set<AnyCancellable> = []
         private let reportingService: ReportingServiceProtocol
@@ -90,8 +91,7 @@ extension ReportingView {
         
         private func getTopics() {
             let sharePublisher = reportingService.getTopicNames().share()
-            
-            sharePublisher.sink { completion in
+            sharePublisher.sink { [weak self] completion in
             } receiveValue: { [weak self]names in
                 print("topics: " , names)
                 self?.topics = names
@@ -125,10 +125,13 @@ extension ReportingView {
         }
         
        private func getReports(_ topic: String, from: Int? = nil, to: Int? = nil) {
+           self.loading = true
             reportingService.getReportsByTopic(name: topic, from: from, to: to)
-                .sink { completion in
+                .sink { [weak self] completion in
+                    self?.loading = false
                     print(completion)
                 } receiveValue: { [weak self] reports in
+                    self?.loading = false
                     self?.reports = reports
                     self?.reportGroups = []
                 }.store(in: &cancelableSet)
@@ -136,10 +139,12 @@ extension ReportingView {
         }
         
        private func getReportByDataSource(_ dataSource: String, from: Int? = nil, to: Int? = nil) {
+           loading = true
             let topics = self.topics.filter {$0.contains(dataSource)}
-            reportingService.getReportsByTopics(topics: topics, from: from, to: to).sink { completion in
+            reportingService.getReportsByTopics(topics: topics, from: from, to: to).sink { [weak self] completion in
+                self?.loading = false
             } receiveValue: {[weak self] reports in
-//                print("reports: " ,reports)
+                self?.loading = false
                 self?.reportGroups = reports
                 self?.reports = []
             }.store(in: &cancelableSet)
@@ -147,9 +152,12 @@ extension ReportingView {
         }
         
         private func getReportByTopics(_ topics: [String], from: Int? = nil, to: Int? = nil) {
-             reportingService.getReportsByTopics(topics: topics, from: from, to: to).sink { completion in
+            loading = true
+             reportingService.getReportsByTopics(topics: topics, from: from, to: to)
+                .sink { [weak self ] completion in
+                 self?.loading = false
              } receiveValue: {[weak self] reports in
-//                 print("reports: " ,reports)
+                 self?.loading = false
                  self?.reportGroups = reports
                  self?.reports = []
              }.store(in: &cancelableSet)

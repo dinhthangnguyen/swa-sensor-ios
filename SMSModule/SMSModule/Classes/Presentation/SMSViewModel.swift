@@ -21,11 +21,10 @@ extension SMSView {
         private let smsService: SMSServiceProtocol
         init(smsService: SMSServiceProtocol = SMSService()) {
             self.smsService = smsService
-            getRunningContainers()
         }
         
         
-        private func getRunningContainers() {
+        func getRunningContainers() {
             self.loading = true
             smsService.getRunningContainers().sink {[weak self] completion in
                 self?.loading = false

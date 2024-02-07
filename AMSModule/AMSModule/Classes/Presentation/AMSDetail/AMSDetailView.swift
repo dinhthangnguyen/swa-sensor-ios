@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NetworkCore
 
 struct AMSDetailView: View {
     @ObservedObject private var viewModel: ViewModel
@@ -15,6 +16,7 @@ struct AMSDetailView: View {
         self.viewModel = viewModel
     }
     
+   
     var body: some View {
         let endpoint = Binding<String>(
             get: {viewModel.selectedAMSItem?.endpoint ?? ""},
@@ -52,7 +54,7 @@ struct AMSDetailView: View {
                         TextField("status", text: status)
                     }
                 }
-                
+                loadingView(viewModel.loading)
             }
             .navigationTitle(viewModel.isNew ? "Create API" : "Update API")
             .toolbar {
