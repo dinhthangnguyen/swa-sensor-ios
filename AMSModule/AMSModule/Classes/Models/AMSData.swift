@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AMSStatus: String, CaseIterable, Identifiable, Codable {
+enum AMSStatus: String, CaseIterable, Identifiable, Codable, Hashable {
     var id: String {
         self.rawValue
     }

@@ -14,24 +14,35 @@ public struct AMSView: View {
     public init() {
         
     }
+    
+    var filteredArray: [AMSData] {
+        if viewModel.selectedStatus == nil {
+            return viewModel.amsArray
+        }
+        return viewModel.amsArray.filter {$0.status == viewModel.selectedStatus}
+    }
+    
+    
     public var body: some View {
         let binding: Binding<AMSData?> = Binding(get: {viewModel.selectedService}, set: {viewModel.selectedService = $0})
-        let status = Binding<AMSStatus?>(
-            get: {viewModel.selectedStatus},
-            set: {viewModel.selectedStatus = $0 }
+        let status = Binding<String>(
+            get: {viewModel.selectedStatus?.rawValue ?? "ALL"},
+            set: {viewModel.selectedStatus = AMSStatus(rawValue: $0) }
         )
         
         
         NavigationStack {
             ZStack {
                 VStack {
-                    Picker("Select Status", systemImage: "list.bullet.circle", selection: status) {
+                    Picker("Select Status", selection: status) {
+                        Text("ALL").tag("ALL")
                         ForEach(AMSStatus.allCases) { s in
                             Text(s.rawValue).tag(s)
                         }
                     }.pickerStyle(.segmented)
+                       
                     List(selection: binding) {
-                        ForEach(viewModel.amsArray) { ams in
+                        ForEach(filteredArray) { ams in
                             NavigationLink {
                                 AMSDetailView(viewModel: AMSDetailView.ViewModel(selectedAMSItem: ams))
                             } label: {

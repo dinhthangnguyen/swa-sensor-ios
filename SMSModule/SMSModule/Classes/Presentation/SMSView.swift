@@ -24,6 +24,9 @@ public struct SMSView: View {
                         SMSRow(sms: sms)
                     }
                 }
+                .refreshable {
+                    viewModel.getRunningContainers()
+                }
                 loadingView(viewModel.loading)
             }
             .navigationTitle("SMS")
