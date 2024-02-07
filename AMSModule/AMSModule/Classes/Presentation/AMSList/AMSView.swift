@@ -43,6 +43,10 @@ public struct AMSView: View {
                         viewModel.getAllAPIs()
                     }
                 }
+                .onAppear {
+                    print("hello AMS")
+                    viewModel.getAllAPIs()
+                }
              
                 loadingView(viewModel.loading)
             }
