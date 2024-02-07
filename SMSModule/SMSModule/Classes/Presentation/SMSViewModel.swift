@@ -21,6 +21,7 @@ extension SMSView {
         private let smsService: SMSServiceProtocol
         init(smsService: SMSServiceProtocol = SMSService()) {
             self.smsService = smsService
+            getRunningContainers()
         }
         
         
