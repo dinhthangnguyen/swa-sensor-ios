@@ -14,6 +14,8 @@ extension AMSDetailView {
         @Published var loading: Bool = false
         @Published var showError: String?
         @Published var isNew: Bool = false
+        @Published var success: Bool = false
+        
          var cancellableSet: Set<AnyCancellable> = []
         private let amsService: AMSServiceProtocol
         
@@ -38,6 +40,7 @@ extension AMSDetailView {
                 self?.loading = false
             } receiveValue: { [weak self] data in
                 print("success \(data)" )
+                self?.success = true
             }.store(in: &cancellableSet)
         }
         
@@ -48,6 +51,7 @@ extension AMSDetailView {
                 }
             } receiveValue: { [weak self] data in
                 print("success \(data)" )
+                self?.success = true
             }.store(in: &cancellableSet)
         }
         

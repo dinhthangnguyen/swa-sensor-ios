@@ -16,7 +16,7 @@ struct AMSDetailView: View {
         self.viewModel = viewModel
     }
     
-   
+   @ViewBuilder
     var body: some View {
         let endpoint = Binding<String>(
             get: {viewModel.selectedAMSItem?.endpoint ?? ""},
@@ -58,12 +58,14 @@ struct AMSDetailView: View {
             }
             .navigationTitle(viewModel.isNew ? "Create API" : "Update API")
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {
-                        dismiss()
-                    }, label: {
-                       Text("Cancel")
-                    })
+                if (viewModel.isNew) {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {
+                            dismiss()
+                        }, label: {
+                           Text("Cancel")
+                        })
+                    }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -72,11 +74,17 @@ struct AMSDetailView: View {
                             viewModel.createAMS(amsItem: selectedAMSItem)
                         }
                     }, label: {
-                        Text("Done")
+                        Text("Submit")
                     })
                 }
+                
             }
             
+        }
+        .onReceive(viewModel.$success) { success in
+            if (success) {
+                dismiss()
+            }
         }
     
         
