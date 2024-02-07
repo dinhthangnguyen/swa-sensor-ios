@@ -13,6 +13,6 @@ class AMSAdapter {
                 name: amsDTO.name ?? "",
                 endpoint: amsDTO.endpoint ?? "",
                 description: amsDTO.description ?? "",
-                status: amsDTO.status ?? "")
+                status: amsDTO.status ?? .new)
     }
 }

@@ -17,14 +17,20 @@ public struct SMSView: View {
     public var body: some View {
         let binding: Binding<SMSData?> = Binding(get: {viewModel.selectedService}, set: {viewModel.selectedService = $0})
         NavigationStack {
-            List(selection: binding) {
-                ForEach(viewModel.smsArray) { sms in
-                    SMSRow(sms: sms)
+            ZStack {
+                List(selection: binding) {
+                    ForEach(viewModel.smsArray) { sms in
+                        SMSRow(sms: sms)
+                    }
                 }
+                loadingView(viewModel.loading)
             }
             .navigationTitle("SMS")
             .navigationBarTitleDisplayMode(.inline)
             .frame(minWidth: 300)
+        }
+        .onAppear {
+            viewModel.getRunningContainers()
         }
     
     }

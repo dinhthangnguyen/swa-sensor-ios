@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct AMSData: Codable, Identifiable {
-    let id : String
-    let name : String
-    let endpoint : String
-    let description : String
-    let status : String
+enum AMSStatus: String, Codable {
+    case new = "NEW"
+    case uncertain = "UNCERTAIN"
+    case unavailable = "UNAVAILABLE"
+    case free = "FREE"
+}
+struct AMSData: Hashable, Codable, Identifiable {
+    var id : String
+    var name : String
+    var endpoint : String
+    var description : String
+    var status : AMSStatus
 }

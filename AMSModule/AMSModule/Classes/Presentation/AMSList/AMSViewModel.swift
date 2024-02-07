@@ -1,39 +1,40 @@
 //
-//  SMSViewModel.swift
-//  SMSModule
+//  AMSViewModel.swift
+//  NetworkCore
 //
 //  Created by Thang Nguyen on 2/6/24.
 //
 
-import SwiftUI
-import Combine
+import Foundation
 import NetworkCore
-extension SMSView {
-    
+import Combine
+
+extension AMSView {
     class ViewModel: ObservableObject {
-        @Published var smsArray: [SMSData] = []
+        @Published var amsArray: [AMSData] = []
         @Published var loading: Bool = false
         @Published var alert: String?
-        @Published var selectedService: SMSData?
+        @Published var selectedService: AMSData?
         
         private var cancelableSet: Set<AnyCancellable> = []
         
-        private let smsService: SMSServiceProtocol
-        init(smsService: SMSServiceProtocol = SMSService()) {
-            self.smsService = smsService
+        private let amsService: AMSServiceProtocol
+        init(amsService: AMSServiceProtocol = AMSService()) {
+            self.amsService = amsService
+            getAllAPIs()
         }
         
         
-        func getRunningContainers() {
+        func getAllAPIs() {
             self.loading = true
-            smsService.getRunningContainers().sink {[weak self] completion in
+            amsService.getAllAPIs().sink {[weak self] completion in
                 self?.loading = false
                 if let error = completion.error {
                     self?.alert = error.localizedDescription
                 }
                 
             } receiveValue: { [weak self] array in
-                self?.smsArray = array
+                self?.amsArray = array
                 self?.loading = false
             }
             .store(in: &cancelableSet)
