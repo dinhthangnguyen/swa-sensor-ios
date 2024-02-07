@@ -39,6 +39,9 @@ public struct AMSView: View {
                             }
                         }
                     }
+                    .refreshable {
+                        viewModel.getAllAPIs()
+                    }
                 }
              
                 loadingView(viewModel.loading)
