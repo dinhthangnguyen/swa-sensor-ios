@@ -2,53 +2,32 @@ PODS:
   - Alamofire (5.8.1)
   - AMSModule (0.1.0):
     - Alamofire (~> 5.8.1)
-    - NetworkCore
-  - NetworkCore (0.1.0):
+    - CoreModule
+  - CoreModule (0.1.0):
     - Alamofire (~> 5.8.1)
-    - Swinject
   - ReportingModule (0.1.0):
     - Alamofire (~> 5.8.1)
-    - NetworkCore
-  - RxCocoa (6.6.0):
-    - RxRelay (= 6.6.0)
-    - RxSwift (= 6.6.0)
-  - RxRelay (6.6.0):
-    - RxSwift (= 6.6.0)
-  - RxSwift (6.6.0)
-  - SideMenu (5.0.3)
+    - CoreModule
   - SMSModule (0.1.0):
     - Alamofire (~> 5.8.1)
-    - NetworkCore
-  - SnapKit (5.6.0)
-  - Swinject (2.8.3)
+    - CoreModule
 
 DEPENDENCIES:
   - Alamofire (~> 5.8.1)
   - AMSModule (from `./AMSModule`)
-  - NetworkCore (from `./NetworkCore`)
+  - CoreModule (from `./CoreModule`)
   - ReportingModule (from `./ReportingModule`)
-  - RxCocoa (= 6.6.0)
-  - RxSwift (= 6.6.0)
-  - SideMenu (~> 5.0)
   - SMSModule (from `./SMSModule`)
-  - SnapKit
-  - Swinject
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - RxCocoa
-    - RxRelay
-    - RxSwift
-    - SideMenu
-    - SnapKit
-    - Swinject
 
 EXTERNAL SOURCES:
   AMSModule:
     :path: "./AMSModule"
-  NetworkCore:
-    :path: "./NetworkCore"
+  CoreModule:
+    :path: "./CoreModule"
   ReportingModule:
     :path: "./ReportingModule"
   SMSModule:
@@ -56,17 +35,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
-  AMSModule: cac8baab8fb4e75fa0dad2da4d45f54b771c8a66
-  NetworkCore: 2707ea8a07d291e4832888af61390700a68530d7
-  ReportingModule: 57acd12c8fc27ca86f69bbbb8bd7b2f1c6356dc2
-  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
-  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
-  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
-  SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
-  SMSModule: 25fc82cff7a7d219e91752ede5a8e06dfd985be3
-  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
+  AMSModule: c05bda3dcbe5a5c6254ea23ceb93e08a5af85605
+  CoreModule: bcc278b691dc85b1bbf789dea7008fe825402ee5
+  ReportingModule: 67e5dc3c803895e74a0b4e9bc0062b0335b632cf
+  SMSModule: 6bee8584d958051aaa2cd3b525f6b70063d4b156
 
-PODFILE CHECKSUM: 7aee7e429959635fff3700cfdf27c57c98d1b7d2
+PODFILE CHECKSUM: 0a567bbb98715cfb72822e0c8baf6a459fd6de14
 
 COCOAPODS: 1.13.0

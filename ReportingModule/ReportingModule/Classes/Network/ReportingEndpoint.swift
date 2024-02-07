@@ -5,7 +5,7 @@
 //  Created by Thang Nguyen on 2/4/24.
 //
 
-import NetworkCore
+import CoreModule
 import Alamofire
 
 public enum ReportingEndpoint {

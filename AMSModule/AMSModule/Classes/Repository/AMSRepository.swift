@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import NetworkCore
+import CoreModule
 protocol AMSRepositoryProtocol {
     func getAllAPIs() -> AnyPublisher<[AMSDataDTO], NetworkError>
     func updateAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkError>
@@ -21,15 +21,15 @@ class AMSRepository: AMSRepositoryProtocol {
         self.networkService = networkService
     }
     
-    func getAllAPIs() -> AnyPublisher<[AMSDataDTO], NetworkCore.NetworkError> {
+    func getAllAPIs() -> AnyPublisher<[AMSDataDTO], NetworkError> {
         networkService.request(endpoint: AMSEndpoint.getAllAPIs)
     }
     
-    func updateAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkCore.NetworkError> {
+    func updateAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkError> {
         networkService.request(endpoint: AMSEndpoint.updateAPI(ams: ams))
     }
     
-    func createAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkCore.NetworkError> {
+    func createAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkError> {
         networkService.request(endpoint: AMSEndpoint.createAPI(ams: ams))
     }
     

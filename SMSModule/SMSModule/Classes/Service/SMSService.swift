@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import NetworkCore
+import CoreModule
 
 protocol SMSServiceProtocol {
     func getRunningContainers() -> AnyPublisher<[SMSData], NetworkError>

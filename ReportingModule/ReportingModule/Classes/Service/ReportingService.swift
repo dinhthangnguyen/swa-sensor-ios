@@ -7,7 +7,7 @@
 //
 
 import Combine
-import NetworkCore
+import CoreModule
  protocol ReportingServiceProtocol {
     func getTopicNames() -> AnyPublisher<[String], NetworkError>
     func getReportsByTopic(name: String, from: Int?, to: Int?) -> AnyPublisher<[Report], NetworkError>

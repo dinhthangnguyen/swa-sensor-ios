@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreModule
 
 public struct SMSView: View {
     @ObservedObject var viewModel = ViewModel()
@@ -23,14 +24,14 @@ public struct SMSView: View {
                         SMSRow(sms: sms)
                     }
                 }
+                .refreshable {
+                    viewModel.getRunningContainers()
+                }
                 loadingView(viewModel.loading)
             }
             .navigationTitle("SMS")
             .navigationBarTitleDisplayMode(.inline)
             .frame(minWidth: 300)
-        }
-        .onAppear {
-            viewModel.getRunningContainers()
         }
     
     }

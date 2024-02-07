@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NetworkCore
+import CoreModule
 
 struct AMSDetailView: View {
     @ObservedObject private var viewModel: ViewModel
@@ -33,25 +33,43 @@ struct AMSDetailView: View {
             set: {viewModel.selectedAMSItem?.description = $0}
         )
         
-        let status = Binding<String>(
-            get: {viewModel.selectedAMSItem?.status.rawValue ?? ""},
-            set: {viewModel.selectedAMSItem?.status = AMSStatus(rawValue: $0) ?? .new}
+        let status = Binding<AMSStatus>(
+            get: {viewModel.selectedAMSItem?.status ?? .new},
+            set: {viewModel.selectedAMSItem?.status = $0 }
+        )
+        
+        let showSuccess = Binding<Bool>(
+            get: {viewModel.showSuccess},
+            set: {viewModel.showSuccess = $0 }
         )
         
         NavigationStack {
             ZStack {
                 List {
                     HStack {
-                        TextField("Endpoint", text: endpoint)
-                    }
-                    HStack {
+                        Text("Name")
+                        Spacer()
                         TextField("Name", text: name)
+                            .multilineTextAlignment(.trailing)
+
                     }
                     HStack {
+                        Text("Endpoint")
+                        Spacer()
+                        TextField("Endpoint", text: endpoint)
+                            .multilineTextAlignment(.trailing)
+                    }
+                   
+                    HStack {
+                        Text("Description")
+                        Spacer()
                         TextField("Description", text: description)
+                            .multilineTextAlignment(.trailing)
                     }
-                    HStack {
-                        TextField("status", text: status)
+                    Picker("Status", selection: status) {
+                        ForEach(AMSStatus.allCases) { s in
+                            Text(s.rawValue).tag(s)
+                        }
                     }
                 }
                 loadingView(viewModel.loading)
@@ -70,9 +88,14 @@ struct AMSDetailView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        if let selectedAMSItem = viewModel.selectedAMSItem {
+                        guard let selectedAMSItem = viewModel.selectedAMSItem else {return}
+                        
+                        if viewModel.isNew {
                             viewModel.createAMS(amsItem: selectedAMSItem)
+                        } else {
+                            viewModel.updateAMI(amsItem: selectedAMSItem)
                         }
+                       
                     }, label: {
                         Text("Submit")
                     })
@@ -81,13 +104,12 @@ struct AMSDetailView: View {
             }
             
         }
-        .onReceive(viewModel.$success) { success in
-            if (success) {
-                dismiss()
-            }
-        }
-    
-        
+        .alert("Successfull", isPresented: showSuccess, actions: {
+            Button("OK", role: .cancel) { dismiss() }
+
+        }, message: {
+            Text("Update/Create successfully")
+        })
     }
 }
 
