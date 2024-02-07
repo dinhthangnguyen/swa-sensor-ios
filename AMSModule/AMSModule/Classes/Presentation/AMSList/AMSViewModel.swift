@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import NetworkCore
+import CoreModule
 import Combine
 
 extension AMSView {

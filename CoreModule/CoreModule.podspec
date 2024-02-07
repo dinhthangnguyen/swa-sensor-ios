@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'NetworkCore'
+  s.name             = 'CoreModule'
   s.version          = '0.1.0'
   s.summary          = 'A short description of NetworkCore.'
 
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Thang Nguyen/NetworkCore'
+  s.homepage         = 'https://github.com/Thang Nguyen/CoreModule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 #  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Thang Nguyen' => 'nguyendinhthanght@gmail.com' }
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'NetworkCore/Classes/**/*'
+  s.source_files = 'CoreModule/Classes/**/*'
   
   # s.resource_bundles = {
   #   'NetworkCore' => ['NetworkCore/Assets/*.png']

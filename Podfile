@@ -7,7 +7,7 @@ target 'SWASensoriOS' do
 
   # Pods for SWASensoriOS
   pod 'Alamofire', '~> 5.8.1'
-  pod 'NetworkCore', :path => './NetworkCore'
+  pod 'CoreModule', :path => './CoreModule'
   pod 'ReportingModule', :path => './ReportingModule'
   pod 'AMSModule', :path => './AMSModule'
   pod 'SMSModule', :path => './SMSModule'

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Charts
-import NetworkCore
+import CoreModule
 
 public struct ReportingView: View {
     @ObservedObject var viewModel = ViewModel()

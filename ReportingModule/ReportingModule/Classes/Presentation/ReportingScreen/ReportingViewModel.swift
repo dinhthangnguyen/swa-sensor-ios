@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import NetworkCore
+import CoreModule
 
 extension Date {
     var timInMiliseconds: Int {

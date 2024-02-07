@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NetworkCore
+import CoreModule
 
 public struct SMSView: View {
     @ObservedObject var viewModel = ViewModel()

@@ -6,7 +6,7 @@
 //
 
 import Combine
-import NetworkCore
+import CoreModule
 
 
 protocol ReportingRepositoryProtocol {

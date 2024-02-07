@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-import NetworkCore
+import CoreModule
 extension SMSView {
     
     class ViewModel: ObservableObject {

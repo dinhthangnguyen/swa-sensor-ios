@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NetworkCore
+import CoreModule
 @main
 struct SWASensoriOSApp: App {
     var body: some Scene {

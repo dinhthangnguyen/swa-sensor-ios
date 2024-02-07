@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NetworkCore
+import CoreModule
 
 struct AMSDetailView: View {
     @ObservedObject private var viewModel: ViewModel
