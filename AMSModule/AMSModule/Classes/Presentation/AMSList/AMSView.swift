@@ -19,7 +19,11 @@ public struct AMSView: View {
         NavigationStack {
             List(selection: binding) {
                 ForEach(viewModel.amsArray) { ams in
-                    AMSRow(ams: ams)
+                    NavigationLink {
+                        AMSDetailView(viewModel: AMSDetailView.ViewModel(selectedAMSItem: ams))
+                    } label: {
+                        AMSRow(ams: ams)
+                    }
                 }
             }
             .navigationTitle("API Manager Service")
@@ -27,11 +31,6 @@ public struct AMSView: View {
             .frame(minWidth: 300)
             .toolbar {
                 ToolbarItem {
-//                    NavigationLink {
-//                        AMSDetailView(viewModel: AMSDetailView.ViewModel())
-//                    } label: {
-//                        Label("Add", systemImage: "plus")
-//                    }
                     Button(action: {
                         showing.toggle()
                     }, label: {
