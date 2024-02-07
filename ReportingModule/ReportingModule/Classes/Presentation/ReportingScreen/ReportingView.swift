@@ -95,11 +95,11 @@ public struct ReportingView: View {
                         Label("Data Source", systemImage: "pencil.and.list.clipboard")
                     }
                 }
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Time", systemImage: "square.and.arrow.up") {
-                        print("will pick time")
-                    }
-                }
+//                ToolbarItem(placement: .topBarLeading) {
+//                    Button("Time", systemImage: "square.and.arrow.up") {
+//                        print("will pick time")
+//                    }
+//                }
              
             }
         }
