@@ -38,6 +38,11 @@ struct AMSDetailView: View {
             set: {viewModel.selectedAMSItem?.status = $0 }
         )
         
+        let showSuccess = Binding<Bool>(
+            get: {viewModel.showSuccess},
+            set: {viewModel.showSuccess = $0 }
+        )
+        
         NavigationStack {
             ZStack {
                 List {
@@ -99,13 +104,12 @@ struct AMSDetailView: View {
             }
             
         }
-        .onReceive(viewModel.$success) { success in
-            if (success) {
-                dismiss()
-            }
-        }
-    
-        
+        .alert("Successfull", isPresented: showSuccess, actions: {
+            Button("OK", role: .cancel) { dismiss() }
+
+        }, message: {
+            Text("Update/Create successfully")
+        })
     }
 }
 
