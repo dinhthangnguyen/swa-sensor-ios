@@ -84,6 +84,15 @@ struct AMSDetailView: View {
                            Text("Cancel")
                         })
                     }
+                } else {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {
+                            guard let selectedAMSItem = viewModel.selectedAMSItem else {return}
+                            viewModel.deleteAMS(amsItem: selectedAMSItem)
+                        }, label: {
+                           Label("Delete", systemImage: "trash")
+                        })
+                    }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {

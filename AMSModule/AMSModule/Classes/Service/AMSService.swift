@@ -13,6 +13,7 @@ protocol AMSServiceProtocol {
     func getAllAPIs() -> AnyPublisher<[AMSData], NetworkError>
     func updateAPI(ams: AMSData) -> AnyPublisher<AMSData, NetworkError>
     func createAPI(ams: AMSData) -> AnyPublisher<AMSData, NetworkError>
+    func deleteAMS(id: String) -> AnyPublisher<String,NetworkError>
 }
 
 class AMSService: AMSServiceProtocol {
@@ -40,5 +41,10 @@ class AMSService: AMSServiceProtocol {
             .map {AMSAdapter.getAMS(amsDTO: $0)}
             .eraseToAnyPublisher()
     }
+    
+    func deleteAMS(id: String) -> AnyPublisher<String, NetworkError> {
+        amsRepository.deleteAMS(id: id)
+    }
+    
     
 }
