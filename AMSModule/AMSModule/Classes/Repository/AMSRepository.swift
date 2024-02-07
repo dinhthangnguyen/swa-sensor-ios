@@ -12,6 +12,7 @@ protocol AMSRepositoryProtocol {
     func getAllAPIs() -> AnyPublisher<[AMSDataDTO], NetworkError>
     func updateAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkError>
     func createAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO,NetworkError>
+    func deleteAMS(id: String) -> AnyPublisher<String,NetworkError>
 }
 
 class AMSRepository: AMSRepositoryProtocol {
@@ -31,6 +32,10 @@ class AMSRepository: AMSRepositoryProtocol {
     
     func createAPI(ams: AMSData) -> AnyPublisher<AMSDataDTO, NetworkError> {
         networkService.request(endpoint: AMSEndpoint.createAPI(ams: ams))
+    }
+    
+    func deleteAMS(id: String) -> AnyPublisher<String, NetworkError> {
+        networkService.request(endpoint: AMSEndpoint.deleteAMS(id: id))
     }
     
     

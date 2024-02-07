@@ -13,6 +13,7 @@ enum AMSEndpoint {
     case getAllAPIs
     case updateAPI(ams: AMSData)
     case createAPI(ams: AMSData)
+    case deleteAMS(id: String)
 }
 
 extension AMSEndpoint: NetworkEndpointProtocol {
@@ -46,6 +47,8 @@ extension AMSEndpoint: NetworkEndpointProtocol {
             return "/apis/\(amsDTO.id)"
         case .createAPI:
             return "/apis"
+        case let .deleteAMS(id):
+            return "/apis/\(id)"
         }
     }
     
@@ -57,6 +60,8 @@ extension AMSEndpoint: NetworkEndpointProtocol {
             return .put
         case .createAPI:
             return .post
+        case .deleteAMS:
+            return .delete
         }
     }
     

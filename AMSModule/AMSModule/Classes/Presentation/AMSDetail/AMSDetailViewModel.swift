@@ -67,5 +67,20 @@ extension AMSDetailView {
             }.store(in: &cancellableSet)
         }
         
+        func deleteAMS(amsItem: AMSData) {
+            print("deleteAMS: \(amsItem)")
+            self.loading = true
+            amsService.deleteAMS(id: amsItem.id).sink { [weak self] completion in
+                if let error = completion.error {
+                    self?.showError = error.localizedDescription
+                }
+                self?.showSuccess = true
+                self?.loading = false
+            } receiveValue: { [weak self] data in
+                print("success \(data)" )
+                self?.showSuccess = true
+            }.store(in: &cancellableSet)
+        }
+        
     }
 }
