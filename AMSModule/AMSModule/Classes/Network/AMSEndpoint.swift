@@ -33,7 +33,7 @@ extension AMSEndpoint: NetworkEndpointProtocol {
     }
     
     var baseURL: URL {
-        guard let url = URL(string: "http://localhost:8787/api") else {
+        guard let url = URL(string: "https://cs590priusreportservice.azurewebsites.net/api") else {
             fatalError("Please provide correct URL")
         }
         return url

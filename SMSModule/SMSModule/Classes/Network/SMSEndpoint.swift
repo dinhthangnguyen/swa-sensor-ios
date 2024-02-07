@@ -14,7 +14,7 @@ enum SMSEndpoint {
 
 extension SMSEndpoint: NetworkEndpointProtocol {
     var baseURL: URL {
-        guard let url = URL(string: "http://localhost:8787") else {
+        guard let url = URL(string: "https://cs590priusreportservice.azurewebsites.net") else {
             fatalError("Please provide correct URL")
         }
         return url
