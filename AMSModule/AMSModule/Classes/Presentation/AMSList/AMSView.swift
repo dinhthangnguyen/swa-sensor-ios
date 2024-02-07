@@ -16,23 +16,38 @@ public struct AMSView: View {
     }
     public var body: some View {
         let binding: Binding<AMSData?> = Binding(get: {viewModel.selectedService}, set: {viewModel.selectedService = $0})
+        let status = Binding<AMSStatus?>(
+            get: {viewModel.selectedStatus},
+            set: {viewModel.selectedStatus = $0 }
+        )
+        
+        
         NavigationStack {
             ZStack {
-                List(selection: binding) {
-                    ForEach(viewModel.amsArray) { ams in
-                        NavigationLink {
-                            AMSDetailView(viewModel: AMSDetailView.ViewModel(selectedAMSItem: ams))
-                        } label: {
-                            AMSRow(ams: ams)
+                VStack {
+                    Picker("Select Status", systemImage: "list.bullet.circle", selection: status) {
+                        ForEach(AMSStatus.allCases) { s in
+                            Text(s.rawValue).tag(s)
+                        }
+                    }.pickerStyle(.segmented)
+                    List(selection: binding) {
+                        ForEach(viewModel.amsArray) { ams in
+                            NavigationLink {
+                                AMSDetailView(viewModel: AMSDetailView.ViewModel(selectedAMSItem: ams))
+                            } label: {
+                                AMSRow(ams: ams)
+                            }
                         }
                     }
                 }
+             
                 loadingView(viewModel.loading)
             }
             .navigationTitle("API Manager Service")
             .navigationBarTitleDisplayMode(.inline)
             .frame(minWidth: 300)
             .toolbar {
+               
                 ToolbarItem {
                     Button(action: {
                         showing.toggle()

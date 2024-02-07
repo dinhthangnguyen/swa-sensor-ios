@@ -7,12 +7,16 @@
 
 import Foundation
 
-enum AMSStatus: String, Codable {
+enum AMSStatus: String, CaseIterable, Identifiable, Codable {
+    var id: String {
+        self.rawValue
+    }
     case new = "NEW"
     case uncertain = "UNCERTAIN"
     case unavailable = "UNAVAILABLE"
     case free = "FREE"
 }
+
 struct AMSData: Hashable, Codable, Identifiable {
     var id : String
     var name : String

@@ -15,7 +15,8 @@ extension AMSView {
         @Published var loading: Bool = false
         @Published var alert: String?
         @Published var selectedService: AMSData?
-        
+        @Published var selectedStatus: AMSStatus?
+
         private var cancelableSet: Set<AnyCancellable> = []
         
         private let amsService: AMSServiceProtocol

@@ -20,13 +20,16 @@ extension AMSDetailView {
         private let amsService: AMSServiceProtocol
         
         init(selectedAMSItem: AMSData? = nil, amsService: AMSServiceProtocol = AMSService()) {
-            isNew = selectedAMSItem == nil
+            self.success = false
+            self.isNew = selectedAMSItem == nil
             if let selectedAMSItem {
                 self.selectedAMSItem = selectedAMSItem
             } else {
                 self.selectedAMSItem = AMSData(id: "", name: "", endpoint: "", description: "", status: .new)
             }
             self.amsService = amsService
+            print("isNew: \(self.isNew)")
+
         }
         
         func createAMS(amsItem: AMSData) {
