@@ -22,7 +22,7 @@ extension ReportingView {
         @Published var dataSources: [String] = []
         @Published var selectedDataSource: String?
         @Published var loadingError: String = ""
-        @Published var fromDate: Date = Date.init(timeIntervalSinceNow: -10*24*3600)
+        @Published var fromDate: Date = Date.init(timeIntervalSinceNow: -24*3600)
         @Published var toDate: Date = .now
         @Published var selectedTopic: String? = nil
         @Published var loading = false

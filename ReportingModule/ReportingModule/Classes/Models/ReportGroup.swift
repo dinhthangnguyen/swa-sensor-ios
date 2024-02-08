@@ -16,10 +16,16 @@ struct ReportGroup : Identifiable {
         self.id = id
         self.data = data
         switch id {
-        case "SS_AGE_WEIGHT":
+        case "SS_Api-WEIGHT_Api-HEIGHT":
             color = .red
-        case "SS_HEIGHT_WEIGHT":
+        case "SS_Api-AGE_Api-HEIGHT":
             color = .green
+        case "SS_VaccineX_COVID19":
+            color = .orange
+        case "SS_Moderna_COVID19":
+            color = .purple
+        case "SS_Pfizer-BioNTech_COVID19":
+            color = .yellow
         default:
             color = .blue
         }

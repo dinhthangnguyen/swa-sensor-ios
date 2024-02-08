@@ -19,7 +19,7 @@ struct AMSRow: View {
             }
             Spacer(minLength: 20)
             HStack {
-                Text("Port: \(ams.name)").font(.system(size: 12))
+                Text("Name: \(ams.name)").font(.system(size: 12))
 
                 Spacer()
                 Text(ams.description).font(.system(size: 10))
